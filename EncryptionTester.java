@@ -13,8 +13,8 @@ public class EncryptionTester
     @Test
     public void testAdd(){
         
-        int result = Encryption.add(2,3);
-        assertEquals(5,result);
+        int result = Encryption.add("abcde");
+        assertEquals("eabcd",result);
         
     }
     
