@@ -26,25 +26,8 @@ public class Encryption
         sentence = sentence.replace('1','i');
 
         return sentence;
-    //מזיז מילים פונקציה 2    
     }
-    public static String MovingWords (String sentence, int words) {
-    int firstSpace = sentence.indexOf(" ");
-    int secondSpace = indexOf(" ", firstSpace);
-    if (words == 2) {
-        String word1 = sentence.substring(0, firstSpace);
-        String word2 = sentence.substring(firstSpace + 1);
-        sentence = word2 + " " + word1;
-        return sentence;
-    }
-    if (words == 3) {
-        String word1 = sentence.substring(0, firstSpace);
-        String word2 = sentence.substring(firstSpace + 1, secondSpace);
-        String word3 = sentence.substring(secondSpace + 1);
-        sentence = word3 + " " + word1 + " " + word2;
-        return sentence;
-    }
-}
+    
     // מזיז אותיות 1
     public static String MovingCharacters(String sentence){
         int space = sentence.length() - sentence.replaceAll(" ", "").length();
@@ -68,6 +51,7 @@ public class Encryption
         return sentence;
     }
 
+    //מזיז מילים פונקציה 2    
     public static String movingWords (String sentence, int words) {
     int firstSpace = sentence.indexOf(" ");
     int secondSpace = sentence.indexOf(" ", firstSpace + 1);
@@ -84,6 +68,7 @@ public class Encryption
     }
     return sentence;
     }
+
     
     public static void main(String[] args){
         
