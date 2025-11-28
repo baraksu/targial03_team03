@@ -1,3 +1,4 @@
+import java.util.Scanner;
 /**
  * Write a description of the class Encryption here.
  *
@@ -67,5 +68,38 @@ public class Encryption
         sentence = word3 + " " + word1 + " " + word2;
     }
     return sentence;
+    }
+//   בודק כמה מילים יש
+    public static int WordsCount(String sentence) {
+        int originalLength = sentence.length(); 
+        String WithoutSpaces = sentence.replaceAll(" ", "");
+        int WithoutSpacesLenght = WithoutSpaces.length();
+        int words = originalLength - WithoutSpacesLenght + 1;
+        return words;
+    }
+    
+// פונקצייה ראשית
+    public static void main(String[] args){
+        Scanner reader = new Scanner(System.in);
+        System.out.println("Welcome to the Encryption / Decryption Program \nEnter 1 for Encrypt | 2 for Decrypt");
+        int choice = reader.nextInt();
+        reader.nextLine();
+        if (choice == 1) {
+                System.out.println("Enter up to 3 words sentence");
+                String sentence  = reader.nextLine();
+                
+                System.out.println("The encrypted sentence: " + sentence);
+        }
+        else if (choice == 2) {
+                System.out.println("Enter up to 3 words sentence");
+                String sentence  = reader.nextLine();
+                
+                System.out.println("The decrypted sentence: " + sentence);
+        }
+        else {
+            System.out.println (choice + "is not a valid choice");
+            return;
+        }
+        
     }
 }
