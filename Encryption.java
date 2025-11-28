@@ -45,6 +45,27 @@ public class Encryption
         return sentence;
     }
 }
+    public static String MovingCharacters(String sentence){
+        int space = sentence.length() - sentence.replaceAll(" ", "").length();
+        if (space == 0){
+            String firstchar = sentence.substring(0, 1);
+            String restofcharacters = sentence.substring(1);
+            sentence = restofcharacters + firstchar;
+        }
+        else if (space == 1){
+            int len = sentence.length();
+            String lasttwocharacters = sentence.substring(len - 2);
+            String restofcharacters = sentence.substring(0, len - 2);
+            sentence = lasttwocharacters + restofcharacters;
+        }
+        else if (space == 2){
+            int len = sentence.length();
+            String lastthreecharacters = sentence.substring(len - 3);
+            String restofcharacters = sentence.substring(0, len - 3);
+            sentence = lastthreecharacters + restofcharacters;
+        }
+        return sentence;
+    }
     
     public static void main(String[] args){
         
