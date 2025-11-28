@@ -11,11 +11,18 @@ import org.junit.Test;
 public class EncryptionTester
 {
     @Test
-    public void testAdd(){
-        
-        int result = Encryption.add(2,3);
-        assertEquals(5,result);
-        
+    public void movingWords1(){
+        String result = Encryption.movingWords("ax vf",2);
+        assertEquals("vf ax",result);
     }
-    
+    @Test
+    public void movingWords2(){
+        String result2 = Encryption.movingWords("ax vf ht", 3);
+        assertEquals("ht ax vf",result2);
+    }
+    @Test
+    public void movingWords3(){
+        String result3 = Encryption.movingWords("how are you?", 3);
+        assertEquals("you? how are", result3);
+    }
 }
