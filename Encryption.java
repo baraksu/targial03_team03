@@ -66,6 +66,23 @@ public class Encryption
         }
         return sentence;
     }
+
+    public static String movingWords (String sentence, int words) {
+    int firstSpace = sentence.indexOf(" ");
+    int secondSpace = sentence.indexOf(" ", firstSpace + 1);
+    if (words == 2) {
+        String word1 = sentence.substring(0, firstSpace);
+        String word2 = sentence.substring(firstSpace + 1);
+        sentence = word2 + " " + word1;
+    }
+    if (words == 3) {
+        String word1 = sentence.substring(0, firstSpace);
+        String word2 = sentence.substring(firstSpace + 1, secondSpace);
+        String word3 = sentence.substring(secondSpace + 1);
+        sentence = word3 + " " + word1 + " " + word2;
+    }
+    return sentence;
+    }
     
     public static void main(String[] args){
         
