@@ -6,24 +6,26 @@
  */
 public class Encryption
 {
-    public static String replaceVowels(String str){
-        str = str.replace('a','@');
-        str = str.replace('e','#');
-        str = str.replace('o','0');
-        str = str.replace('u','&');
-        str = str.replace('i','1');
+    // מחליף אותיות מיוחדות לסימנים                                                 
+    public static String replaceVowels(String sentence){
+        sentence = sentence.replace('a','@');
+        sentence = sentence.replace('e','#');
+        sentence = sentence.replace('o','0');
+        sentence = sentence.replace('u','&');
+        sentence = sentence.replace('i','1');
 
-        return str;
+        return sentence;
         
     }
-    public static String replaceSpecialCharacter(String str){
-        str = str.replace('@','a');
-        str = str.replace('#','e');
-        str = str.replace('0','o');
-        str = str.replace('&','u');
-        str = str.replace('1','i');
+    // מחליף סימנים לאותיות מיוחדות
+    public static String replaceSpecialCharacter(String sentence){
+        sentence = sentence.replace('@','a');
+        sentence = sentence.replace('#','e');
+        sentence = sentence.replace('0','o');
+        sentence = sentence.replace('&','u');
+        sentence = sentence.replace('1','i');
 
-        return str;
+        return sentence;
     //מזיז מילים פונקציה 2    
     }
     public static String MovingWords (String sentence, int words) {
