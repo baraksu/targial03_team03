@@ -27,8 +27,8 @@ public class Encryption
 
         return sentence;
     }
-    
-    // מזיז אותיות 1
+
+    // הזזת אותיות פונקציה 1
     public static String MovingCharacters(String sentence){
         int space = sentence.length() - sentence.replaceAll(" ", "").length();
         if (space == 0){
