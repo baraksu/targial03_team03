@@ -75,8 +75,8 @@ public class EncryptionTester
     }
     @Test
     public void replaceVowels3() {
-        String actual = Encryption.replaceVowels("oded katsh");
-        assertEquals("0d#d k@tsh", actual);
+        String actual = Encryption.replaceVowels("oded katash");
+        assertEquals("0d#d k@t@sh", actual);
     }
     @Test
     public void replaceVowels4() {
@@ -100,8 +100,8 @@ public class EncryptionTester
     }
     @Test
     public void replaceSpecialCharacter3() {
-        String actual = Encryption.replaceSpecialCharacter("0d#d k@tsh");
-        assertEquals("oded kastsh", actual);
+        String actual = Encryption.replaceSpecialCharacter("0d#d k@t@sh");
+        assertEquals("oded katash", actual);
     }
     @Test
     public void replaceSpecialCharacter4() {
