@@ -5,12 +5,14 @@ import org.junit.Test;
 /**
  * Write a description of class EncryptionTester here.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author (Ariel, Eitan, Yotam)
+ * @version (1.0 (30.11.2025)
  */
 public class EncryptionTester
 {
-    
+
+    // בודק את מזיז המילים
+    // Yotam
     @Test
     public void movingWords1(){
         String result = Encryption.movingWords("ax vf",2);
@@ -36,7 +38,9 @@ public class EncryptionTester
         String result5 = Encryption.movingWords("banana", 1);
         assertEquals("banana", result5);
     }
-    
+
+    // בודק את סופר המילים
+    // Yotam
     @Test
     public void wordsCount1(){
         int result1 = Encryption.wordsCount("Yotam Ophir");
@@ -63,6 +67,8 @@ public class EncryptionTester
         assertEquals(5, result5);
     }
 
+    // בודק את מחליף התווים
+    // Eitan
     @Test
     public void replaceVowels1() {
         String actual = Encryption.replaceVowels("eitan");
@@ -88,7 +94,9 @@ public class EncryptionTester
         String actual = Encryption.replaceVowels("IWEFHI");
         assertEquals("IWEFHI", actual);
     }   
-    
+
+    // בודק את מחזיר התווים
+    // Eitan
     @Test
     public void replaceSpecialCharacter1() {
         String actual = Encryption.replaceSpecialCharacter("#1t@n");
@@ -114,7 +122,9 @@ public class EncryptionTester
         String actual = Encryption.replaceSpecialCharacter("IWEFHI");
         assertEquals("IWEFHI", actual);
     }
-    
+
+    // בודק את מזיז האותיות
+    // Ariel
     @Test
     public void movingCharacters1() {
         String result1 = Encryption.movingCharacters("ariel", 1);
@@ -146,6 +156,8 @@ public class EncryptionTester
         assertEquals("jklabcd efgh i", result6);
     }
 
+    // בודק את מזיז האותיות בחזרה
+    // Ariel
     @Test
     public void movingCharactersBack1() {
         String result1 = Encryption.movingCharactersBack("larie", 1);
@@ -176,7 +188,9 @@ public class EncryptionTester
         String result6 = Encryption.movingCharactersBack("jklabcd efgh i", 3);
         assertEquals("abcd efgh ijkl", result6);
     }
-    
+
+    // בודק את מזיז המילים בחזרה
+    // Ariel
     @Test
     public void movingWordsBack1() {
         String result1 = Encryption.movingWordsBack("abcd", 1);
