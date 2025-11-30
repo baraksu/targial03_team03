@@ -10,6 +10,7 @@ import org.junit.Test;
  */
 public class EncryptionTester
 {
+    
     @Test
     public void movingWords1(){
         String result = Encryption.movingWords("ax vf",2);
@@ -61,4 +62,37 @@ public class EncryptionTester
         int result5 = Encryption.WordsCount("I love to eat banana");
         assertEquals(5, result5);
     }
+ce.replace('a','@');
+        sentence = sentence.replace('e','#');
+        sentence = sentence.replace('o','0');
+        sentence = sentence.replace('u','&');
+        sentence = sentence.replace('i','1');
+
+    @Test
+    public void replaceVowels1() {
+        String actual = Encryption.replaceVowels("eitan");
+        assertEquals("#1t@n", actual);
+    }
+    @Test
+    public void replaceVowels2() {
+        String actual = Encryption.replaceVowels("uads");
+        assertEquals("&@ds", actual);
+    }
+    @Test
+    public void replaceVowels3() {
+        String actual = Encryption.replaceVowels("oded katsh");
+        assertEquals("0d#d k@tsh", actual);
+    }
+    @Test
+    public void replaceVowels4() {
+        String actual = Encryption.replaceVowels("Eitan");
+        assertEquals("E1t@n", actual);
+    }
+   @Test
+    public void replaceVowels5() {
+        String actual = Encryption.replaceVowels("IWEFHI");
+        assertEquals("IWEFHI", actual);
+    }
+    
+
 }
