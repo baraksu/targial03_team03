@@ -25,4 +25,40 @@ public class EncryptionTester
         String result3 = Encryption.movingWords("how are you?", 3);
         assertEquals("you? how are", result3);
     }
+    @Test
+    public void movingWords4(){
+        String result4 = Encryption.movingWords("Yotam Ophir", 2);
+        assertEquals("Ophir Yotam", result4);
+    }
+    @Test
+    public void movingWords5(){
+        String result5 = Encryption.movingWords("banana", 1);
+        assertEquals("banana", result5);
+    }
+    
+    @Test
+    public void WordsCount1(){
+        int result1 = Encryption.WordsCount("Yotam Ophir");
+        assertEquals(2, result1);
+    }
+    @Test
+    public void WordsCount2(){
+        int result2 = Encryption.WordsCount("I love Givat Smuel");
+        assertEquals(4, result2);
+    }
+    @Test
+    public void WordsCount3(){
+        int result3 = Encryption.WordsCount("computer");
+        assertEquals(1, result3);
+    }
+    @Test
+    public void WordsCount4(){
+        int result4 = Encryption.WordsCount("How are you?");
+        assertEquals(3, result4);
+    }
+    @Test
+    public void WordsCount5(){
+        int result5 = Encryption.WordsCount("I love to eat banana");
+        assertEquals(5, result5);
+    }
 }
