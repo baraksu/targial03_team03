@@ -88,6 +88,41 @@ public class EncryptionTester
         String actual = Encryption.replaceVowels("IWEFHI");
         assertEquals("IWEFHI", actual);
     }
-    
+     // מחליף סימנים לאותיות מיוחדות
+    public static String replaceSpecialCharacter(String sentence){
+        sentence = sentence.replace('@','a');
+        sentence = sentence.replace('#','e');
+        sentence = sentence.replace('0','o');
+        sentence = sentence.replace('&','u');
+        sentence = sentence.replace('1','i');
+
+        return sentence;
+    }
+
+    @Test
+    public void replaceSpecialCharacter1() {
+        String actual = Encryption.replaceSpecialCharacter("#1t@n");
+        assertEquals("eitan", actual);
+    }
+    @Test
+    public void replaceSpecialCharacter2() {
+        String actual = Encryption.replaceSpecialCharacter("&@ds");
+        assertEquals("uads", actual);
+    }
+    @Test
+    public void replaceSpecialCharacter3() {
+        String actual = Encryption.replaceSpecialCharacter("0d#d k@tsh");
+        assertEquals("oded kastsh", actual);
+    }
+    @Test
+    public void replaceSpecialCharacter4() {
+        String actual = Encryption.replaceSpecialCharacter("E1t@n");
+        assertEquals("Eitan", actual);
+    }
+   @Test
+    public void replaceSpecialCharacter5() {
+        String actual = Encryption.replaceSpecialCharacter("IWEFHI");
+        assertEquals("IWEFHI", actual);
+    }
 
 }
