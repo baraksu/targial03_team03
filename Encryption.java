@@ -1,9 +1,10 @@
 import java.util.Scanner;
 /**
- * Write a description of the class Encryption here.
+ * The Encryption class handles the three-step encryption and decryption process
+ * for sentences containing up to three English words.
  *
  * @author Yotam, Etan, Ariel
- * @version (a version number or a date)
+ * @version (30.11.2025)
  */
 public class Encryption
 {
