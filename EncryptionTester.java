@@ -62,11 +62,6 @@ public class EncryptionTester
         int result5 = Encryption.WordsCount("I love to eat banana");
         assertEquals(5, result5);
     }
-ce.replace('a','@');
-        sentence = sentence.replace('e','#');
-        sentence = sentence.replace('o','0');
-        sentence = sentence.replace('u','&');
-        sentence = sentence.replace('i','1');
 
     @Test
     public void replaceVowels1() {
