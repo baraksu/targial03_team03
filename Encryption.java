@@ -8,7 +8,8 @@ import java.util.Scanner;
  */
 public class Encryption
 {
-    // מחליף אותיות מיוחדות לסימנים                                                
+    // מחליף אותיות מיוחדות לסימנים
+    // Eitan
     public static String replaceVowels(String sentence){
         sentence = sentence.replace('a','@');
         sentence = sentence.replace('e','#');
@@ -17,7 +18,10 @@ public class Encryption
         sentence = sentence.replace('i','1');
         return sentence;
     }
+
+    
     // מחליף סימנים לאותיות מיוחדות
+    // Eitan
     public static String replaceSpecialCharacter(String sentence){
         sentence = sentence.replace('@','a');
         sentence = sentence.replace('#','e');
@@ -27,7 +31,8 @@ public class Encryption
         return sentence;
     }
 
-        // הזזת אותיות פונקציה  1
+    // הזזת אותיות
+    // Ariel
     public static String movingCharacters(String sentence, int words){
         int len = sentence.length();
         if (words == 1){
@@ -48,7 +53,8 @@ public class Encryption
         return sentence;
     }
     
-    // הזזת אותיות פונקציה 2
+    // הזזת אותיות
+    // Ariel
     public static String movingCharactersBack(String sentence, int words){
         if (words == 1){
             String lastchar = sentence.substring(0, 1);
@@ -68,7 +74,8 @@ public class Encryption
         return sentence;
     }
 
-    //מזיז מילים פונקציה 2    
+    // מזיז מילים
+    // Yotam
     public static String movingWords (String sentence, int words) {
     int firstSpace = sentence.indexOf(" ");
     int secondSpace = sentence.indexOf(" ", firstSpace + 1);
@@ -85,7 +92,9 @@ public class Encryption
     }
     return sentence;
     }
-    
+
+    // מזיז את המילים בחזרה
+    // Ariel
     public static String movingWordsBack (String sentence, int words) {
     int firstSpace = sentence.indexOf(" ");
     int secondSpace = sentence.indexOf(" ", firstSpace + 1);
@@ -102,7 +111,8 @@ public class Encryption
     }
     return sentence;
     }
-//   בודק כמה מילים יש
+    // בושק כמה מילים יש
+    // Yotam
     public static int wordsCount(String sentence) {
         int originalLength = sentence.length(); 
         String withoutSpaces = sentence.replaceAll(" ", "");
@@ -111,7 +121,8 @@ public class Encryption
         return words;
     }
     
-// פונקצייה ראשית
+    // פונקצייה ראשית
+    // Yotam
     public static void main(String[] args){
         Scanner reader = new Scanner(System.in);
         System.out.println("Welcome to the Encryption / Decryption Program \nEnter 1 for Encrypt | 2 for Decrypt");
@@ -143,10 +154,8 @@ public class Encryption
                     System.out.println("The decrypted sentence: " + sentence);
                 }
         }
-        else {
+        else 
             System.out.println (choice + "is not a valid choice");
-            return;
-        }
         
     }
 }
