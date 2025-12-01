@@ -155,7 +155,7 @@ public class Encryption
                 }
         }
         else 
-            System.out.println (choice + "is not a valid choice");
+            System.out.println (choice + " is not a valid choice");
         
     }
 }
