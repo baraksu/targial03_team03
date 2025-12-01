@@ -53,7 +53,7 @@ public class Encryption
         return sentence;
     }
     
-    // הזזת אותיות
+    // הזזת אותיות בחזרה
     // Ariel
     public static String movingCharactersBack(String sentence, int words){
         if (words == 1){
