@@ -77,41 +77,41 @@ public class Encryption
     // מזיז מילים
     // Yotam
     public static String movingWords (String sentence, int words) {
-    int firstSpace = sentence.indexOf(" ");
-    int secondSpace = sentence.indexOf(" ", firstSpace + 1);
-    if (words == 2) {
-        String word1 = sentence.substring(0, firstSpace);
-        String word2 = sentence.substring(firstSpace + 1);
-        sentence = word2 + " " + word1;
-    }
-    if (words == 3) {
-        String word1 = sentence.substring(0, firstSpace);
-        String word2 = sentence.substring(firstSpace + 1, secondSpace);
-        String word3 = sentence.substring(secondSpace + 1);
-        sentence = word3 + " " + word1 + " " + word2;
-    }
-    return sentence;
+        int firstSpace = sentence.indexOf(" ");
+        int secondSpace = sentence.indexOf(" ", firstSpace + 1);
+        if (words == 2) {
+            String word1 = sentence.substring(0, firstSpace);
+            String word2 = sentence.substring(firstSpace + 1);
+            sentence = word2 + " " + word1;
+        }
+        if (words == 3) {
+            String word1 = sentence.substring(0, firstSpace);
+            String word2 = sentence.substring(firstSpace + 1, secondSpace);
+            String word3 = sentence.substring(secondSpace + 1);
+            sentence = word3 + " " + word1 + " " + word2;
+        }
+        return sentence;
     }
 
-    // מזיז את המילים בחזרה
+        // מזיז את המילים בחזרה
     // Ariel
     public static String movingWordsBack (String sentence, int words) {
-    int firstSpace = sentence.indexOf(" ");
-    int secondSpace = sentence.indexOf(" ", firstSpace + 1);
-    if (words == 2) {
-        String word2 = sentence.substring(0, firstSpace);
-        String word1 = sentence.substring(firstSpace + 1);
-        sentence = word1 + " " + word2;
+        int firstSpace = sentence.indexOf(" ");
+        int secondSpace = sentence.indexOf(" ", firstSpace + 1);
+        if (words == 2) {
+            String word2 = sentence.substring(0, firstSpace);
+            String word1 = sentence.substring(firstSpace + 1);
+            sentence = word1 + " " + word2;
+        }
+        if (words == 3) {
+            String word3 = sentence.substring(0, firstSpace);
+            String word1 = sentence.substring(firstSpace + 1, secondSpace);
+            String word2 = sentence.substring(secondSpace + 1);
+            sentence = word1 + " " + word2 + " " + word3;
+        }
+        return sentence;
     }
-    if (words == 3) {
-        String word3 = sentence.substring(0, firstSpace);
-        String word1 = sentence.substring(firstSpace + 1, secondSpace);
-        String word2 = sentence.substring(secondSpace + 1);
-        sentence = word1 + " " + word2 + " " + word3;
-    }
-    return sentence;
-    }
-    // בושק כמה מילים יש
+    // בוד ק כמה מילים יש
     // Yotam
     public static int wordsCount(String sentence) {
         int originalLength = sentence.length(); 
@@ -156,6 +156,5 @@ public class Encryption
         }
         else 
             System.out.println (choice + " is not a valid choice");
-        
     }
 }
