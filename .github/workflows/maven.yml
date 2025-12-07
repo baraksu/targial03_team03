@@ -15,9 +15,11 @@ on:
     branches: ["main"]
 
 permissions:
-  contents: read
+  contents: write
   checks: write
   pull-requests: write
+  pages: write
+  id-token: write
 
 jobs:
   build:
@@ -51,3 +53,12 @@ jobs:
             target/surefire-reports/
             target/site/surefire-report.html
           retention-days: 30
+      - name: Publish HTML Test Report
+        uses: peaceiris/actions-gh-pages@v3
+        if: always()
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./target/site
+          destination_dir: test-reports
+          keep_files: false
+          enable_jekyll: false
